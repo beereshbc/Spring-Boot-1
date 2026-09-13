@@ -35,7 +35,7 @@ public class Student {
         this.age = age;
     }
 
-    public Student(Integer age, LocalDate dob, String email, String name) {
+    public Student(Integer age, String name, String email, LocalDate dob) {
         this.age = age;
         this.dob = dob;
         this.email = email;

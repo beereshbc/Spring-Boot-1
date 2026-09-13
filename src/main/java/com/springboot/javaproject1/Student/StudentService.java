@@ -1,5 +1,6 @@
 package com.springboot.javaproject1.Student;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import java.time.LocalDate;
@@ -9,15 +10,14 @@ import java.util.List;
 @Component //Component gives the priority to run the classes in java
 public class StudentService {
 
+    private final StudentRepository studentRepository;
+
+    @Autowired
+    public StudentService(StudentRepository studentRepository) {
+        this.studentRepository = studentRepository;
+    }
+
     public List<Student> getStudent(){
-        return List.of(
-                new Student(
-                        1L,
-                        "Beereshkumar B C",
-                        "bcbeereshkumar@gmail.com",
-                        LocalDate.of(2005, Month.JULY, 28),
-                        21
-                )
-        );
+         return studentRepository.findAll();
     }
 }
