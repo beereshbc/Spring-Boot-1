@@ -17,6 +17,11 @@ public class StudentService {
         this.studentRepository = studentRepository;
     }
 
+    public void addNewStudent(Student student) {
+        System.out.println("Controller reached");
+        System.out.println(student);
+    }
+
     public List<Student> getStudent(){
          return studentRepository.findAll();
     }
