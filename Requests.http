@@ -15,3 +15,5 @@ Content-Type: application/json
 
 ###
 DELETE http://localhost:8080/api/v1/student/12
+###
+PUT http://localhost:8080/api/v1/student/7?name=BhishmaPithamaha
